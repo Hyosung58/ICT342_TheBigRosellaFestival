@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/btngp.css">
+<link rel="stylesheet" href="css/bookticket.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/activities.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/navbar.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+
+</head>
+
+<body>
+
+<div class="header">
+  <img class="logo" src="ccs_logo.png" alt="Ccs Logo" usemap="#workmap"href="homepage.html">
+  <map name="workmap">
+  <area shape="default"alt="Whole Logo" href="homepage.html">
+  </map>
+
+  <h1>Big Rosella Festival</h1>
+ 
+  </div>
+<div class="topnav" id="myTopnav">
+  <a href="homepage.html">Home</a>
+  <a href="activities.html">Activities</a>
+  <a href="about.html">About</a>
+  <a href="contact.html"class="active">Contact</a>
+  <a href="bookticket.php">Book Ticket</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<style>
+
+    p {
+  text-align: center;
+  font-size: 150%;
+  font-family: arial;
+  }
+
+</style>
+
+<h2>Contact us</h2>
+<div class="container">
+  <div style="text-align:center">
+    <p>For more information, don't hesitate to contact us!</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h3>Petersen's Farm</h3>
+      <p>
+        <br>Petersen's Farm: 2 Reilly Road, Woolooga</br>
+        <br>Phone: 0411 624 648</br>
+        <br>Email: ccs_kitchen@yahoo.com</br>
+      </p>
+
+    </div>
+    <div class="column">
+
+      <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+
+      <!--The div element for the map -->
+      <div id="map"></div>
+      <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var bigrosella = {lat: -25.985759, lng: 152.403343};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: bigrosella});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: bigrosella, map: map});
+}
+    </script>
+      <!--Load the API from the specified URL
+      * The async attribute allows the browser to render the page while the API loads
+      * The key parameter will contain your own API key (which is not needed for this tutorial)
+      * The callback parameter executes the initMap() function
+      -->
+      <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO3hE4bE7WV7mGuXL4kn9caoWI44tD8Ic&callback=initMap">
+      </script>
+
+    </div>
+  </div>
+</div>
+
+</body>
+<div class="footer">
+  <style>
+  h2 {
+    display: block;
+    font-size: 1.7em;
+    margin-block-start: 0.20em;
+    margin-block-end: 0.20em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+</style>
+
+  <br><h2>Big Rosella Festival</h2></br>
+  <div>
+    <div class="column">
+      <p>
+        Follow our social media!
+      </p>
+      <p>
+        <br><a href="https://www.facebook.com/ccskitchen/">Facebook</a></br>
+        <br><a href="https://www.instagram.com/ccs.kitchen/">Instagram</a></br>
+        <br><a href="https://www.facebook.com/petersensfarm/">Petersen's Farm</a></br>
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        Our Website
+      </p>
+      <br><a href="homepage.html">Home</a></br>
+      <br><a href="activities.html">Activities</a></br>
+      <br><a href="about.html">About</a></br>
+      <br><a href="contact.html">Contact</a></br>
+      <br><a href="bookticket.php">Book Ticket</a></br>
+    </div>
+  </div>
+</div>
+</html>
